@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+:root{
+    --col_pri: #f5dc01;
+    --col_sec: #1e1e1e;
+}
+
+main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.secciones{
+    width: 95%;
+    height: auto;
+}
+.titulo{
+    height: auto;
+    margin-top: 10px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.titulo h1{
+    font-size: clamp(1rem, 5vw, 1.7rem);
+    text-transform: uppercase;
+}
+.secciones .buttons{
+    display: flex;
+    column-gap: 10px;
+}
+.secciones .lbl_btn{
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: clamp(0.9rem, 5vw, 1rem);
+    background:var(--col_pri);
+    cursor: pointer;
+}
+.secciones .lbl_btn:hover{
+    background: var(--col_sec);
+    color: white;
+}
+.table-responsive{
+    padding: 10px 0;
+}
+.table-responsive .table-primary{
+    width: 100%;
+}
+.table-responsive .table-primary th{
+    background: #f5f2f2dd;
+    padding: 5px 0;
+    box-shadow: 5px 0 8px rgba(213, 213, 213, 0.4);
+}
+.table-responsive .table-primary td{
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.btn_up{
+    background: rgb(51, 102, 149);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* MODAL */
+.modal{
+    position: absolute;
+    z-index: 10;
+    top: 30%;
+    transform: translateY(-100vh);
+    transition: 0.5s ease;
+    display: flex;
+    width: 500px;
+    height: auto;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 5px 8px rgba(186, 186, 186, 0.5);
+    border: 1px solid black;
+}
+.modal form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.modal form label{
+    margin: 15px 0 10px 0;
+}
+.modal form input{
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.modal .bt-registrar{
+    border: none;
+    background: var(--col_pri);
+    margin-top: 15px;
+    font-size: clamp(1rem, 5vw, 1.1rem);
+    cursor: pointer;
+}
+.modal .bt-registrar:hover{
+    box-shadow: 0 5px 8px rgba(213, 213, 213, 0.4);
+}
+span{
+    position: absolute;
+    right: 20px;
+    padding: 4px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+span:hover{
+    background: #ececec;
+}

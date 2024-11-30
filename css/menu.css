@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --color:#f5dc01;
+    --hover_li:rgb(25, 25, 25);
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: "Laila", serif;
+    
+}
+::-webkit-scrollbar {
+    width: 7px; /* Ancho de la barra */
+}
+::-webkit-scrollbar-track {
+    background-color: black; /* Color de fondo */
+}
+
+/* Color de la barra deslizante */
+::-webkit-scrollbar-thumb {
+    background-color: #ffd500; /* Color de la barra */
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #fad51d; /* Color al pasar el cursor */
+}
+main{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns:0.4fr 2fr;
+    transition: grid-template-columns 0.4s ease-in;
+}
+main iframe{
+    width: 100%;
+    height: 90%;
+}
+.menu{
+    background: var(--color);
+}
+.cotnent_img{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cotnent_img img{
+    margin-top: 10px;
+    width: 90%;
+    height: auto;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+.listas_text, .listas_icon{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.listas_text ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.listas_text ul li, .listas_icon ul li{
+    list-style: none;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: clamp(0.5rem, 2vw, 1rem);
+}
+
+.listas_text ul li:hover{
+    color: white;
+    background: var(--hover_li);
+}
+.listas_icon{
+    display: none;
+}
+.listas_icon i{
+    border-radius: 50%;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.listas_icon i:hover{
+    color: white;
+    background: rgb(21, 21, 21);
+}
+.listas_icon ul li b{
+    font-weight: 100;
+    padding: 5px;
+    border-radius: 8px;
+    background: black;
+    color: white;
+}
+.listas_icon ul li{
+    position: relative;
+}
+.listas_icon ul li b{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50px;
+    opacity: 0;
+}
+.listas_icon ul li b::after{
+    content: '';
+    position: absolute;
+    left:-19px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 11px solid black;
+}
+.listas_icon ul li:hover b{
+    opacity: 1;
+}
+/* CONTENIDO */
+.contenido{
+    width: 100%;
+    height: 100%;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 1px 8px #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.content_data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    width: auto;
+    height: 100%;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+.content_data i{
+    font-size: 1rem;
+}
+.content_data img{
+    height: 100%;
+}
+.content_data p{
+    font-size: 0.95rem;
+}
+.content_data:hover{
+    background: #ededed;
+}
+.header >i{
+    font-size: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+}
+.header >i:hover{
+    color: #ffd500;    
+}
+.menu_select{
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    z-index: 100;
+    width: 150px;
+    border-radius: 10px;
+    height: 100px;
+    box-shadow: 0 5px 8px rgba(33, 33, 33, 0.1);
+    padding: 18px 14px;
+    background: white;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.menu_select p{
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.menu_select p:hover{
+    background: #f8f6f6;
+}
+.menu_select a{
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 10px;
+    color: black;
+}
+.menu_select a:hover{
+    background: #f8f6f6;
+}
+label{
+    height: 100%;
+}
+#int_check{
+    appearance: none;
+    display: none;
+}
+#int_check:checked ~ i{
+    transform: rotate(180deg);
+    transition: transform 0.4s ease-in;
+}
+i{
+    transition: transform 0.4s ease-in;
+}
+@media screen and (max-width:700px) {
+    main{
+        grid-template-columns:1fr;
+    }
+}

@@ -1,0 +1,133 @@
+:root{
+    --col_pri: #f5dc01;
+    --col_sec: #1e1e1e;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+main{
+    width: 100%;
+    margin: 70px 0 0 0;
+}
+.contacto{
+    padding: 30px 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contacto h1{
+    font-size: clamp(1rem, 5vw, 2rem);
+}
+.contacto p{
+    margin-bottom: 20px;
+    font-size: clamp(1rem, 5vw, 1.1rem);
+}
+.content-contacto{
+    width: 80%;
+    height: auto;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1.2fr 1fr;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+form label{
+    margin: 15px 0;
+}
+form input{
+    padding: 10px;
+    border-radius: 10px;
+}
+form input:focus{
+    outline: none;
+    border: 2px solid var(--col_pri);
+    transition: 0.5s ease;
+}
+form .enviar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form button{
+    background: var(--col_pri);
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px 0;
+    font-size: clamp(1rem, 5vw, 1.2rem);    
+}
+form textarea{
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    resize: none;
+    height: auto;
+}
+form textarea:focus{
+    outline: none;
+    border: 2px solid var(--col_pri);
+    transition: 0.5s ease;
+}
+form button:hover{
+    background: var(--col_sec);
+    color: white;
+    box-shadow: 0 5px 7px rgba(134, 132, 132, 0.489);
+}
+.detalle-contacto{
+    padding: 30px;
+    background: var(--col_pri);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    border: 1px solid var(--col_pri);
+}
+.detalle-contacto:hover{
+    border: 1px solid var(--col_sec);
+    box-shadow: 0 5px 8px rgba(184, 184, 184, 0.489);
+}
+.detalle-contacto h4{
+    font-size: clamp(1rem, 5vw, 1.3rem);
+}
+.detalle-contacto span{
+    text-align: center;
+    font-weight: bold;
+    font-size: clamp(1rem, 5vw, 1.4rem);
+}
+.detalle-contacto  .info{
+    text-align: center;
+    margin-bottom: 0;
+}
+.detalle-contacto ul li{
+    list-style: none;
+    text-align: center;
+    color: black;
+}
+.detalle-contacto p{
+    margin: 0;
+}
+.detalle-contacto a {
+    font-size: clamp(1rem, 5vw, 1.15rem);
+    text-decoration: none;
+    color: black;
+}
+.detalle-contacto a:hover{
+    color: rgb(61, 61, 61);
+}
+iframe{
+    width: 100%;
+    height: 300px;
+}

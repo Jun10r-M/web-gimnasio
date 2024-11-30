@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mi Aplicación Web</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      /* Estilos para la clase "container" */
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#" id="home">Inicio</a></li>
+          <li><a href="#" id="about">Acerca de</a></li>
+          <li><a href="#" id="contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div id="contenido-principal">
+        <h1>Bienvenido a mi aplicación web</h1>
+        <p>Este es el contenido principal de mi aplicación web</p>
+      </div>
+    </main>
+
+    <footer>
+      <p>Copyright © 2021 Mi Aplicación Web</p>
+    </footer>
+  <script>
+   $(document).ready(function() {
+
+// Evento para cargar el contenido de "Inicio"
+        $("#home").click(function(e) {
+        e.preventDefault();
+
+        // Cargar contenido de otra página en el contenedor
+        $("#contenido-principal").load("otra-pagina.htm", function(response, status, xhr) {
+            if (status == "error") {
+            $("#contenido-principal").html("<p>Error al cargar el contenido: " + xhr.status + " " + xhr.statusText + "</p>");
+            }
+        });
+        });
+
+
+
+      // Evento para cargar el contenido de "Acerca de"
+      $("#about").click(function(e) {
+        e.preventDefault();
+        $("#contenido-principal").html(
+          "<h1>Acerca de mi aplicación web</h1><p>Este es el contenido acerca de mi aplicación web</p>"
+        );
+      });
+    
+      // Evento para cargar el contenido de "Contacto"
+      $("#contact").click(function(e) {
+        e.preventDefault();
+        $("#contenido-principal").html(
+          "<h1>Contacto con mi aplicación web</h1><p>Este es el contenido de contacto con mi aplicación web</p>"
+        );
+      });
+    });
+  </script>
+</body>
